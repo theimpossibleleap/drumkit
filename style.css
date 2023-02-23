@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 body {
     margin: 0 auto;
     background: #383838;
@@ -12,10 +15,10 @@ body {
 }
 
 .keys {
-    max-width: 1000px;
     display: flex;
-    justify-content: space-between;
     flex-flow: row wrap;
+    width: 100vw;
+    justify-content: space-evenly;
 }
 
 .key {
@@ -23,12 +26,20 @@ body {
     flex-direction: column;
     min-height: 85px;
     min-width: 85px;
-    margin: 10px;
     align-items: center;
     justify-content: center;
     color:white;
     background:#0A0B0B;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.07s;
+    border-radius: 5px;
+}
+
+.playing {
+    transform: scale(1.1);
+    border: 1px solid #ECC82B;
+    box-shadow: 0 0 20px rgba(245, 245, 245, .4);
+
 }
 
 kbd {
@@ -36,8 +47,9 @@ kbd {
 }
 
 span.sound {
-    font-size: 12px;
+    font-size: 13px;
     text-transform: uppercase;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: lightgrey;
+    font-family:'Roboto Mono';
+    font-weight: 400;
+    color: #ECC82B;
 }
